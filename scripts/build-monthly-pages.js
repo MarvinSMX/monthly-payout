@@ -24,8 +24,8 @@ const path = require('path');
 // ─────────────────────────────────────────────────────────────
 // CONFIG
 // ─────────────────────────────────────────────────────────────
-const CSV_URL = 'data/seed.csv';
-const SITE = 'https://monthlypayout.com';
+const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSscSF78pEGxi9Lcx2YHZjHHAkyy75b5Icb6A8nK2aehtmEq-xgpFPA7sQdkmZYKjkUdrtPL1SdMm62/pub?output=csv';
+const SITE = 'https://marvinsmx.github.io/monthly-payout/';
 const OUT_DIR = process.env.OUT_DIR || path.join(__dirname, '..');
 const LOGO = 'monthly2-croppedd.png';
 const OG_IMAGE = `${SITE}/month1222.jpg`;
@@ -124,12 +124,12 @@ const NETWORK_BAR = `
 <div class="site-network-bar">
   <div class="site-network-track">
     <span class="site-network-label">Our Sites:</span>
-      <a href="https://growthatlas.com/" class="site-pill" title="Growth ETF rankings">📈 GrowthAtlas.com</a>
-      <a href="https://yieldatlas.com/" class="site-pill" title="Dividend ETF rankings">💵 YieldAtlas.com</a>
-      <a href="https://weeklypayout.com/" class="site-pill" title="Weekly paying dividend ETFs">📅 WeeklyPayout.com</a>
-      <a href="https://monthlypayout.com/" class="site-pill" title="Monthly paying dividend ETFs">🗓️ MonthlyPayout.com</a>
-      <a href="https://orbitfunds.com/" class="site-pill" title="Space & aerospace ETFs">🚀 OrbitFunds.com</a>
-      <a href="https://returnatlas.com/" class="site-pill" title="ETF total returns">📊 ReturnAtlas.com</a>
+      <a href="https://marvinsmx.github.io/growth-atlas/" class="site-pill" title="Growth ETF rankings">📈 GrowthAtlas.com</a>
+      <a href="https://marvinsmx.github.io/yield-atlas/" class="site-pill" title="Dividend ETF rankings">💵 YieldAtlas.com</a>
+      <a href="https://marvinsmx.github.io/weekly-payout/" class="site-pill" title="Weekly paying dividend ETFs">📅 WeeklyPayout.com</a>
+      <a href="https://marvinsmx.github.io/monthly-payout/" class="site-pill" title="Monthly paying dividend ETFs">🗓️ MonthlyPayout.com</a>
+      <a href="https://marvinsmx.github.io/orbit-funds/" class="site-pill" title="Space & aerospace ETFs">🚀 OrbitFunds.com</a>
+      <a href="https://marvinsmx.github.io/return-atlas/" class="site-pill" title="ETF total returns">📊 ReturnAtlas.com</a>
       <a href="https://dividendstack.com/" class="site-pill" title="Dividend tools directory">🛠️ DividendStack.com</a>
     </div>
 </div>`;
@@ -137,14 +137,14 @@ const NETWORK_BAR = `
 const FOOTER = `
 <footer class="footer">
   <p>
-    <a href="/terms.html">Terms of Use</a> |
-    <a href="/privacy.html">Privacy Policy</a> |
-    <a href="/faq.html">FAQ</a> |
-    <a href="/blog.html">Blog</a> |
-    <a href="/all-monthly-dividend-etfs.html">All ETFs</a> |
-    <a href="https://yieldatlas.com/" target="_blank" rel="noopener">YieldAtlas</a><br><br>
+    <a href="/monthly-payout/terms.html">Terms of Use</a> |
+    <a href="/monthly-payout/privacy.html">Privacy Policy</a> |
+    <a href="/monthly-payout/faq.html">FAQ</a> |
+    <a href="/monthly-payout/blog.html">Blog</a> |
+    <a href="/monthly-payout/all-monthly-dividend-etfs.html">All ETFs</a> |
+    <a href="https://marvinsmx.github.io/yield-atlas/" target="_blank" rel="noopener">YieldAtlas</a><br><br>
     <a href="https://dividendstack.com/" target="_blank" rel="noopener">DividendStack 🛠️</a><br><br>
-    <a href="/advertise" target="_blank" rel="noopener">Advertise</a><br><br>
+    <a href="/monthly-payout/advertise" target="_blank" rel="noopener">Advertise</a><br><br>
     Contact email: <a href="mailto:advertise@mrvn.me">advertise@mrvn.me</a>
   </p>
   <div class="tagline">
@@ -241,8 +241,8 @@ function head({ title, desc, canonical, extraJsonLd }) {
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${canonical}">
-<link rel="icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" href="/monthly-payout/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/monthly-payout/favicon-32x32.png">
 <meta name="theme-color" content="#ffffff">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
@@ -265,7 +265,7 @@ ${extraJsonLd || ''}
 </head>
 <body>
 <div class="content">
-<header onclick="location.href='/'">
+<header onclick="location.href='/monthly-payout/'">
   <img src="${LOGO}" alt="MonthlyPayout.com Logo" class="banner-img">
 </header>
 ${NETWORK_BAR}`;
@@ -300,7 +300,7 @@ function buildTickerPage(f, all, idx) {
   }).join('\n');
 
   const peerRows = peers.map(p =>
-    `<tr><td><a href="/${slug(p.symbol)}-monthly-dividend.html"><strong>$${esc(p.symbol)}</strong></a></td><td>${esc(p.name)}</td><td>${p.yield.toFixed(2)}%</td><td>${/^y/i.test(p.decay || '') ? '<span class="badge badge-bad">Yes</span>' : '<span class="badge badge-ok">No</span>'}</td></tr>`
+    `<tr><td><a href="/monthly-payout/${slug(p.symbol)}-monthly-dividend.html"><strong>$${esc(p.symbol)}</strong></a></td><td>${esc(p.name)}</td><td>${p.yield.toFixed(2)}%</td><td>${/^y/i.test(p.decay || '') ? '<span class="badge badge-bad">Yes</span>' : '<span class="badge badge-ok">No</span>'}</td></tr>`
   ).join('\n');
 
   const decayCopy = !decayKnown
@@ -367,7 +367,7 @@ function buildTickerPage(f, all, idx) {
 
   return `${head({ title: title.replace(/^\$/, ''), desc, canonical: url, extraJsonLd: jsonLd })}
 
-<nav class="breadcrumb"><a href="/">Home</a> › <a href="/all-monthly-dividend-etfs.html">All MonthlyPayout</a> › $${esc(t)}</nav>
+<nav class="breadcrumb"><a href="/monthly-payout/">Home</a> › <a href="/monthly-payout/all-monthly-dividend-etfs.html">All MonthlyPayout</a> › $${esc(t)}</nav>
 
 <main>
 <h1>$${esc(t)} Monthly Dividend: ${f.yield.toFixed(2)}% Yield, Income Calculator &amp; Price Decay</h1>
@@ -436,30 +436,30 @@ ${decayCopy}
 
 <div class="callout tip">
   <strong>The one check that matters most</strong>
-  Put the distribution rate next to the total return. If $${esc(t)} pays ${f.yield.toFixed(2)}% and its total return over the same period is comfortably positive, the payout is being funded by real gains. If total return badly trails the payout, you are being handed your own capital back. Run it yourself on <a href="https://returnatlas.com/" target="_blank" rel="noopener">ReturnAtlas.com</a>.
+  Put the distribution rate next to the total return. If $${esc(t)} pays ${f.yield.toFixed(2)}% and its total return over the same period is comfortably positive, the payout is being funded by real gains. If total return badly trails the payout, you are being handed your own capital back. Run it yourself on <a href="https://marvinsmx.github.io/return-atlas/" target="_blank" rel="noopener">ReturnAtlas.com</a>.
 </div>
 
 <div class="cta-box">
   <h3>📊 See the Full $${esc(t)} Scorecard</h3>
   <p>Live data, complete metrics, and side-by-side comparison against every monthly payer we track.</p>
-  <a href="/etf.html?symbol=${encodeURIComponent(t)}" class="cta-btn">Open the $${esc(t)} Scorecard →</a>
+  <a href="/monthly-payout/etf.html?symbol=${encodeURIComponent(t)}" class="cta-btn">Open the $${esc(t)} Scorecard →</a>
 </div>
 
 <h2>$${esc(t)} Monthly Dividend FAQ</h2>
 ${faqHtml}
 
 <div class="prevnext">
-  ${prev ? `<a href="/${slug(prev.symbol)}-monthly-dividend.html"><span>← Higher Yield</span><b>$${esc(prev.symbol)} — ${prev.yield.toFixed(2)}%</b></a>` : '<span></span>'}
-  ${next ? `<a href="/${slug(next.symbol)}-monthly-dividend.html" style="text-align:right"><span>Lower Yield →</span><b>$${esc(next.symbol)} — ${next.yield.toFixed(2)}%</b></a>` : '<span></span>'}
+  ${prev ? `<a href="/monthly-payout/${slug(prev.symbol)}-monthly-dividend.html"><span>← Higher Yield</span><b>$${esc(prev.symbol)} — ${prev.yield.toFixed(2)}%</b></a>` : '<span></span>'}
+  ${next ? `<a href="/monthly-payout/${slug(next.symbol)}-monthly-dividend.html" style="text-align:right"><span>Lower Yield →</span><b>$${esc(next.symbol)} — ${next.yield.toFixed(2)}%</b></a>` : '<span></span>'}
 </div>
 
 <h2>Keep Researching</h2>
 <ul>
-  <li><a href="/all-monthly-dividend-etfs.html">Every monthly dividend ETF we track</a> — full index, ranked by yield</li>
-  <li><a href="/">The live monthly ETF screener</a> — filter by yield range and price decay</li>
-  <li><a href="/best-etfs-for-monthly-income-2026.html">Best ETFs for Monthly Income 2026</a> — every category explained</li>
-  <li><a href="/qqqi-etf-dividend-guide-2026.html">$QQQI deep dive</a> and <a href="/spyi-etf-dividend-guide-2026.html">$SPYI deep dive</a> — full fund guides</li>
-  <li><a href="https://weeklypayout.com/" target="_blank" rel="noopener">Prefer weekly income?</a> — every weekly paying ETF ranked</li>
+  <li><a href="/monthly-payout/all-monthly-dividend-etfs.html">Every monthly dividend ETF we track</a> — full index, ranked by yield</li>
+  <li><a href="/monthly-payout/">The live monthly ETF screener</a> — filter by yield range and price decay</li>
+  <li><a href="/monthly-payout/best-etfs-for-monthly-income-2026.html">Best ETFs for Monthly Income 2026</a> — every category explained</li>
+  <li><a href="/monthly-payout/qqqi-etf-dividend-guide-2026.html">$QQQI deep dive</a> and <a href="/monthly-payout/spyi-etf-dividend-guide-2026.html">$SPYI deep dive</a> — full fund guides</li>
+  <li><a href="https://marvinsmx.github.io/weekly-payout/" target="_blank" rel="noopener">Prefer weekly income?</a> — every weekly paying ETF ranked</li>
 </ul>
 
 <p class="disclaimer">
@@ -479,7 +479,7 @@ ${FOOTER}
 function buildHubPage(built, allCount) {
   const url = `${SITE}/all-monthly-dividend-etfs.html`;
   const rows = built.map((f, i) =>
-    `<tr><td>${i + 1}</td><td><a href="/${slug(f.symbol)}-monthly-dividend.html"><strong>$${esc(f.symbol)}</strong></a></td><td><a href="/${slug(f.symbol)}-monthly-dividend.html">${esc(f.name)}</a></td><td>${f.yield.toFixed(2)}%</td><td>${fmtAum(f.aum)}</td><td>${/^y/i.test(f.decay || '') ? '<span class="badge badge-bad">Yes</span>' : /^n/i.test(f.decay || '') ? '<span class="badge badge-ok">No</span>' : '—'}</td></tr>`
+    `<tr><td>${i + 1}</td><td><a href="/monthly-payout/${slug(f.symbol)}-monthly-dividend.html"><strong>$${esc(f.symbol)}</strong></a></td><td><a href="/monthly-payout/${slug(f.symbol)}-monthly-dividend.html">${esc(f.name)}</a></td><td>${f.yield.toFixed(2)}%</td><td>${fmtAum(f.aum)}</td><td>${/^y/i.test(f.decay || '') ? '<span class="badge badge-bad">Yes</span>' : /^n/i.test(f.decay || '') ? '<span class="badge badge-ok">No</span>' : '—'}</td></tr>`
   ).join('\n');
 
   const jsonLd = `<script type="application/ld+json">
@@ -503,7 +503,7 @@ function buildHubPage(built, allCount) {
     extraJsonLd: jsonLd
   })}
 
-<nav class="breadcrumb"><a href="/">Home</a> › All Monthly Dividend ETFs</nav>
+<nav class="breadcrumb"><a href="/monthly-payout/">Home</a> › All Monthly Dividend ETFs</nav>
 
 <main>
 <h1>All Monthly Dividend ETFs — Full List Ranked by Yield</h1>
@@ -525,20 +525,20 @@ ${rows}
 </table>
 </div>
 
-${allCount > built.length ? `<p><em>Showing ${built.length} of ${allCount} funds in our dataset. Additional fund pages are being added in batches.</em> The complete live list — including every fund not yet indexed here — is always available on <a href="/">the main screener</a>.</p>` : ''}
+${allCount > built.length ? `<p><em>Showing ${built.length} of ${allCount} funds in our dataset. Additional fund pages are being added in batches.</em> The complete live list — including every fund not yet indexed here — is always available on <a href="/monthly-payout/">the main screener</a>.</p>` : ''}
 
 <div class="cta-box">
   <h3>🗓️ Use the Live Screener Instead</h3>
   <p>Filter all monthly payers by yield range and price decay in real time.</p>
-  <a href="/" class="cta-btn">Open the Screener →</a>
+  <a href="/monthly-payout/" class="cta-btn">Open the Screener →</a>
 </div>
 
 <h2>Related Guides</h2>
 <ul>
-  <li><a href="/best-etfs-for-monthly-income-2026.html">Best ETFs for Monthly Income 2026</a></li>
-  <li><a href="/top-10-highest-yield-monthly-etfs-2026">Top 10 Highest Yield MonthlyPayout 2026</a></li>
-  <li><a href="/qqqi-etf-dividend-guide-2026.html">$QQQI ETF Dividend Guide 2026</a></li>
-  <li><a href="/spyi-etf-dividend-guide-2026.html">$SPYI ETF Dividend Guide 2026</a></li>
+  <li><a href="/monthly-payout/best-etfs-for-monthly-income-2026.html">Best ETFs for Monthly Income 2026</a></li>
+  <li><a href="/monthly-payout/top-10-highest-yield-monthly-etfs-2026">Top 10 Highest Yield MonthlyPayout 2026</a></li>
+  <li><a href="/monthly-payout/qqqi-etf-dividend-guide-2026.html">$QQQI ETF Dividend Guide 2026</a></li>
+  <li><a href="/monthly-payout/spyi-etf-dividend-guide-2026.html">$SPYI ETF Dividend Guide 2026</a></li>
 </ul>
 
 <p class="disclaimer">
@@ -586,7 +586,7 @@ ${urls.join('\n')}
 // ─────────────────────────────────────────────────────────────
 async function main() {
   console.log('→ Fetching CSV…');
-  const res = await fetch(CSV_URL + '?t=' + Date.now());
+  const res = await fetch(CSV_URL + '&t=' + Date.now());
   if (!res.ok) throw new Error(`CSV fetch failed: ${res.status}`);
   const csv = await res.text();
 

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://monthlypayout.com/sitemap.xml
+Sitemap: https://marvinsmx.github.io/monthly-payout/sitemap.xml
