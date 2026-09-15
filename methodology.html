@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How This List Is Built | MonthlyPayout.com</title>
+<meta name="description" content="How ETFs are added to and removed from the Curated List of Top MonthlyPayout on MonthlyPayout.com, an editorial explanation of the process.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="How This List Is Built | MonthlyPayout.com">
+<meta property="og:description" content="How ETFs are added to and removed from the Curated List of Top MonthlyPayout on MonthlyPayout.com.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://monthlypayout.com/methodology.html">
+<meta name="twitter:card" content="summary">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-REPLACE_ME"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-REPLACE_ME');
+</script>
+
+<style>
+  :root {
+    --teal: #30776C;
+    --teal-dark: #245951;
+    --bg: #f4f4f4;
+    --card: #ffffff;
+    --text: #1c1c1c;
+    --muted: #5c6b69;
+    --border: #dfe7e5;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: 'Lato', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--teal);
+    color: #fff;
+    padding: 14px 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  }
+
+  .header-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .logo-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 900;
+    font-size: 1.15rem;
+  }
+
+  .logo-link img {
+    height: 32px;
+    width: auto;
+    display: block;
+  }
+
+  .site-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 0.82rem;
+  }
+
+  .site-pills a {
+    color: #fff;
+    text-decoration: none;
+    background: rgba(255,255,255,0.14);
+    padding: 5px 10px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .site-pills a:hover,
+  .site-pills span.current {
+    background: rgba(255,255,255,0.28);
+  }
+
+  .site-pills span.current {
+    padding: 5px 10px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  main {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+  }
+
+  .eyebrow {
+    color: var(--teal);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin: 0 0 20px;
+    color: var(--teal-dark);
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    color: var(--teal-dark);
+    margin: 0 0 14px;
+  }
+
+  .lede {
+    font-size: 1.08rem;
+    color: var(--muted);
+    margin-bottom: 30px;
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 30px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+
+  .card p {
+    margin: 0 0 16px;
+  }
+
+  .card p:last-child {
+    margin-bottom: 0;
+  }
+
+  .card strong {
+    color: var(--teal-dark);
+  }
+
+  .confirm-card {
+    background: #f4faf9;
+    border: 1px solid var(--teal);
+  }
+
+  .confirm-card p {
+    margin: 0 0 12px;
+  }
+
+  .confirm-card ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .confirm-card li {
+    margin-bottom: 10px;
+  }
+
+  .faq-item {
+    margin-bottom: 20px;
+  }
+
+  .faq-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .faq-item .q {
+    font-weight: 900;
+    color: var(--teal-dark);
+    margin-bottom: 6px;
+  }
+
+  .faq-item .a {
+    margin: 0;
+  }
+
+  .fine-print {
+    font-size: 0.85rem;
+    color: var(--muted);
+    border-left: 3px solid var(--teal);
+    padding-left: 14px;
+    margin-top: 32px;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-top: 30px;
+    color: var(--teal-dark);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .back-link:hover {
+    text-decoration: underline;
+  }
+
+  footer {
+    background: #fff;
+    border-top: 1px solid var(--border);
+    padding: 28px 20px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+
+  footer a {
+    color: var(--teal-dark);
+    text-decoration: none;
+    margin: 0 8px;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 640px) {
+    h1 { font-size: 1.6rem; }
+    .card { padding: 22px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="https://monthlypayout.com/" class="logo-link">
+      <img src="monthly2-croppedd.png" alt="MonthlyPayout.com Logo">
+    </a>
+    <nav class="site-pills">
+      <a href="https://yieldatlas.com/">💵 YieldAtlas.com</a>
+      <a href="https://weeklypayout.com/">📅 WeeklyPayout.com</a>
+      <span class="current">🗓️ MonthlyPayout.com</span>
+      <a href="https://growthatlas.com/">📈 GrowthAtlas.com</a>
+      <a href="https://orbitfunds.com/">🚀 OrbitFunds.com</a>
+      <a href="https://returnatlas.com/">📊 ReturnAtlas.com</a>
+      <a href="https://dividendstack.com/">🛠️ DividendStack.com</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="eyebrow">Editorial Process</div>
+  <h1>How This List Is Built</h1>
+  <p class="lede">Why certain ETFs appear on the Curated List of Top MonthlyPayout, and how names get added or removed over time.</p>
+
+  <div class="card">
+    <p>I'm a full time dividend and income investing content creator, and building this list isn't a formula I plug tickers into. It's a reflection of where my attention, and the community's attention, actually is.</p>
+
+    <p>I invest heavily in dividend and income ETFs myself, so I have real, personal exposure to a lot of what shows up here. Beyond my own portfolio, I spend my days deep in the space: tracking new fund launches, following how issuers are structuring new strategies, and staying on top of what's actually moving in the monthly income ETF world. That's paired with a constant flow of input from the community I talk to every day, through DevotedDividend, through the sites, through comments and DMs, about what they're buying, what they're watching, and what they want me to dig into next.</p>
+
+    <p>The names on this list are the result of all of that coming together. Some are funds I personally hold and believe are worth watching. Some are funds the community keeps bringing up. Some are newer or lesser known ETFs I think deserve more attention because of how they're structured or what they're trying to do. What they all have in common is that they pay monthly distributions and, in my judgment, are worth a spot on this page, whether that's because they're proven, because they're gaining traction, or because they're simply worth learning more about.</p>
+  </div>
+
+  <div class="card">
+    <h2>Why Names Get Added</h2>
+    <p>A fund typically earns a spot on this list for one of a few reasons: it's a newer launch worth putting on investors' radar, it's gaining real traction or assets, it's structured in an interesting or different way compared to similar funds, or it's simply something the community keeps asking me about. There's no minimum asset size or fixed track record required. This is a discovery list as much as it is a ranking, so newer or smaller funds absolutely have a place here.</p>
+  </div>
+
+  <div class="card">
+    <h2>Why Names Get Removed</h2>
+    <p>Funds come off the list when they stop being relevant to monthly income investors. That could mean the fund closed or was liquidated by the issuer, the strategy changed in a way that no longer fits what this list is about, a newer fund launched that does a similar job better, or interest and relevance from the community simply faded. This isn't on a fixed monthly or quarterly schedule. I revisit and update the list on an ongoing basis as the space evolves, not on a set timer.</p>
+  </div>
+
+  <div class="card confirm-card">
+    <h2>Placement Is Not For Sale</h2>
+    <p>This is the part that matters most, so I want to state it plainly:</p>
+    <ul>
+      <li>No fund can pay, sponsor its way onto, or purchase a spot on this list.</li>
+      <li>Advertising relationships with issuers (shown as clearly labeled sponsor banners on this site) are completely separate from the editorial list itself and have zero influence on which funds appear, their ranking, or their placement.</li>
+      <li>A fund being a current or past sponsor has never been, and will never be, a reason it's included on this list.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <p class="q">Can I pay to get my ETF added to the list?</p>
+      <p class="a">No. Placement is editorial only and is never for sale, regardless of any advertising relationship.</p>
+    </div>
+    <div class="faq-item">
+      <p class="q">How is the order of the list determined?</p>
+      <p class="a">Once a fund is on the list, its position is sorted by dividend yield, pulled from the live data feed. That sort order determines placement within the list, not whether a fund is included in the first place.</p>
+    </div>
+    <div class="faq-item">
+      <p class="q">How often is the list updated?</p>
+      <p class="a">On an ongoing basis, as new funds launch and existing funds evolve, rather than on a fixed schedule.</p>
+    </div>
+    <div class="faq-item">
+      <p class="q">Can I suggest a fund to be added?</p>
+      <p class="a">Yes. Reach out at <a href="mailto:advertise@mrvn.me" style="color:var(--teal-dark);font-weight:700;">advertise@mrvn.me</a> and it will be considered like any other name in the space.</p>
+    </div>
+  </div>
+
+  <p class="fine-print">This page is for educational and entertainment purposes only and is not financial advice. Nothing on this list is a buy or sell signal.</p>
+
+  <a href="https://monthlypayout.com/" class="back-link">← Back to the Curated List</a>
+</main>
+
+<footer>
+  <a href="https://monthlypayout.com/terms.html">Terms of Use</a> |
+  <a href="https://monthlypayout.com/privacy.html">Privacy Policy</a> |
+  <a href="https://monthlypayout.com/faq.html">FAQ</a> |
+  <a href="https://monthlypayout.com/blog.html">Blog</a> |
+  <a href="https://monthlypayout.com/all-monthly-dividend-etfs.html">All MonthlyPayout</a> |
+  <a href="https://yieldatlas.com/">YieldAtlas</a>
+  <br><br>
+  Contact: <a href="mailto:advertise@mrvn.me">advertise@mrvn.me</a>
+</footer>
+
+</body>
+</html>
