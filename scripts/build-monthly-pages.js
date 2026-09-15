@@ -130,7 +130,6 @@ const NETWORK_BAR = `
       <a href="https://marvinsmx.github.io/monthly-payout/" class="site-pill" title="Monthly paying dividend ETFs">🗓️ MonthlyPayout.com</a>
       <a href="https://marvinsmx.github.io/orbit-funds/" class="site-pill" title="Space & aerospace ETFs">🚀 OrbitFunds.com</a>
       <a href="https://marvinsmx.github.io/return-atlas/" class="site-pill" title="ETF total returns">📊 ReturnAtlas.com</a>
-      <a href="https://dividendstack.com/" class="site-pill" title="Dividend tools directory">🛠️ DividendStack.com</a>
     </div>
 </div>`;
 
@@ -143,7 +142,6 @@ const FOOTER = `
     <a href="/monthly-payout/blog.html">Blog</a> |
     <a href="/monthly-payout/all-monthly-dividend-etfs.html">All ETFs</a> |
     <a href="https://marvinsmx.github.io/yield-atlas/" target="_blank" rel="noopener">YieldAtlas</a><br><br>
-    <a href="https://dividendstack.com/" target="_blank" rel="noopener">DividendStack 🛠️</a><br><br>
     <a href="/monthly-payout/advertise" target="_blank" rel="noopener">Advertise</a><br><br>
     Contact email: <a href="mailto:advertise@mrvn.me">advertise@mrvn.me</a>
   </p>
