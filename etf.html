@@ -274,7 +274,7 @@ async function loadScorecard() {
   if (!symbol) { loadingEl.style.display = 'none'; errorEl.style.display = 'block'; return; }
 
   try {
-    const res = await fetch(CSV_URL + '&t=' + Date.now());
+    const res = await fetch(CSV_URL + '?t=' + Date.now());
     if (!res.ok) throw new Error('HTTP ' + res.status);
     const csv = await res.text();
     const lines = csv.split('\n');
