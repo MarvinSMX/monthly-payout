@@ -9,7 +9,7 @@
 <link rel="canonical" href="https://marvinsmx.github.io/monthly-payout/btci-monthly-dividend.html">
 <link rel="icon" href="/monthly-payout/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/monthly-payout/favicon-32x32.png">
-<meta name="theme-color" content="#FF2E88">
+<meta name="theme-color" content="#BE185D">
 <meta property="og:title" content="BTCI Monthly Dividend 2026: 26.70% Yield, Income Calculator &amp; Price Decay">
 <meta property="og:description" content="BTCI monthly dividend data — 26.70% distribution rate, ranked #2 of 25 monthly payers. See how much you need to invest for $1,000/month, price decay status, and the closest alternatives.">
 <meta property="og:image" content="https://marvinsmx.github.io/monthly-payout/month1222.jpg">
@@ -32,27 +32,27 @@
     <style>
 /* mrvn ETF Network — shared design system (inline per repo for GitHub Pages) */
 :root {
-  /* Canonical tokens */
-  --bg: #09090B;
-  --surface: #121214;
-  --surface-2: #161618;
-  --ink: #F4F4F5;
-  --muted: #A1A1AA;
-  --line: #27272A;
-  --accent: #FF2E88;
-  /* Extended / legacy aliases (same values) */
+  /* Canonical tokens — light theme */
+  --bg: #F3F5F8;
+  --surface: #FFFFFF;
+  --surface-2: #EEF1F5;
+  --ink: #111827;
+  --muted: #5B6575;
+  --line: #D8DEE8;
+  --accent: #BE185D;
+  /* Extended / legacy aliases */
   --ink-muted: var(--muted);
-  --ink-faint: #71717A;
+  --ink-faint: #8B95A5;
   --paper: var(--bg);
   --paper-2: var(--surface);
-  --line-strong: #3F3F46;
-  --header: #000000;
-  --header-ink: #FAFAFA;
-  --accent-soft: rgba(255, 46, 136, 0.14);
-  --accent-hover: #FF5CA6;
-  --on-accent: #000000;
-  --danger: #FF4D6A;
-  --pos: #FF2E88;
+  --line-strong: #B8C0CE;
+  --header: #FFFFFF;
+  --header-ink: #111827;
+  --accent-soft: rgba(190, 24, 93, 0.10);
+  --accent-hover: #9D174D;
+  --on-accent: #FFFFFF;
+  --danger: #DC2626;
+  --pos: #BE185D;
   --shell: 94%;
   --shell-max: 1320px;
   --radius: 0;
@@ -60,18 +60,18 @@
   --font-display: "Syne", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
   /* aliases for legacy site CSS */
-  --brand: var(--header);
-  --brand-dark: #000000;
-  --brand-mid: var(--surface);
-  --brand-lite: #1A1A1E;
+  --brand: var(--header-ink);
+  --brand-dark: #111827;
+  --brand-mid: var(--surface-2);
+  --brand-lite: #F8FAFC;
   --gold: var(--accent);
   --gold2: var(--accent-hover);
-  --navy: var(--header);
+  --navy: var(--header-ink);
   --primary: var(--accent);
   --green: var(--accent);
   --purple: var(--accent);
   --purple-bright: var(--accent-hover);
-  --purple-deep: var(--header);
+  --purple-deep: var(--header-ink);
   --bg-primary: var(--bg);
   --bg-secondary: var(--surface);
   --bg-panel: var(--surface);
@@ -107,7 +107,7 @@ body {
 a { color: var(--accent); }
 a:hover { color: var(--accent-hover); }
 
-/* Wordmark header */
+/* Wordmark header — light */
 .nx-header, header.nx-header, body > header:not(.nx-skip) {
   width: 100%;
   background: var(--header);
@@ -133,7 +133,7 @@ a:hover { color: var(--accent-hover); }
   font-weight: 500;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(250, 250, 250, 0.55);
+  color: var(--muted);
   margin-top: 0.45rem;
 }
 .logo-link { text-decoration: none; display: inline-block; }
@@ -149,7 +149,7 @@ a:hover { color: var(--accent-hover); }
   align-items: center;
   gap: 0.35rem;
   padding: 0.45rem 0.85rem;
-  border: 1px solid rgba(255,255,255,0.28);
+  border: 1px solid var(--line-strong);
   border-radius: var(--radius);
   color: var(--header-ink);
   background: transparent;
@@ -388,8 +388,8 @@ input[type="text"], select {
   overflow: hidden;
 }
 #etfTable th, table th, thead th {
-  background: #000 !important;
-  color: var(--accent) !important;
+  background: var(--header-ink) !important;
+  color: #FFFFFF !important;
   font-family: var(--font-mono);
   font-weight: 700;
   font-size: 0.68rem;
@@ -509,18 +509,18 @@ input[type="text"], select {
 html{font-size:17.6px}
 @media(min-width:1024px){html{font-size:18.2px}}
 html,body{margin:0;padding:0;overflow-x:hidden !important;width:100%}
-:root{--primary:#FF2E88;--light:#121214;--mid:#A1A1AA;--accent:#FF2E88;--warn:#c62828}
-body{font-family:'Syne',Arial,sans-serif;background:var(--light);color:#F4F4F5;display:flex;flex-direction:column;align-items:center;min-height:100vh;line-height:1.65}
+:root{--primary:#BE185D;--light:#FFFFFF;--mid:#5B6575;--accent:#BE185D;--warn:#c62828}
+body{font-family:'Syne',Arial,sans-serif;background:var(--light);color:#111827;display:flex;flex-direction:column;align-items:center;min-height:100vh;line-height:1.65}
 header{background:var(--primary);text-align:center;width:100%;box-shadow:0 2px 5px rgba(0,0,0,.3);background-image:url('https://www.transparenttextures.com/patterns/noise.png');background-blend-mode:overlay;cursor:pointer;position:sticky;top:0;z-index:10}
 .banner-img{max-width:100%;height:auto;display:block;margin:0 auto}
 @media(min-width:768px){.banner-img{max-width:484px}}
 @media(max-width:767px){.banner-img{max-width:90%;padding:10px 0}header{padding:10px 0}}
 .content{width:95%;max-width:1150px;margin:0 auto;display:flex;flex-direction:column;align-items:center}
-.site-network-bar{width:100%;background:#121214;border-bottom:1px solid #27272A;padding:6px 0}
+.site-network-bar{width:100%;background:#FFFFFF;border-bottom:1px solid #D8DEE8;padding:6px 0}
 .site-network-track{max-width:1150px;margin:0 auto;padding:0 15px;display:flex;align-items:center;gap:6px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
 .site-network-track::-webkit-scrollbar{display:none}
-.site-network-label{font-size:.51em;text-transform:uppercase;letter-spacing:.5px;color:#71717A;font-weight:900;flex-shrink:0}
-.site-pill{display:inline-flex;align-items:center;gap:4px;padding:4px 9px;border-radius:999px;border:1px solid var(--primary);background:#121214;color:var(--primary);font-size:.6em;font-weight:700;text-decoration:none;flex-shrink:0}
+.site-network-label{font-size:.51em;text-transform:uppercase;letter-spacing:.5px;color:#8B95A5;font-weight:900;flex-shrink:0}
+.site-pill{display:inline-flex;align-items:center;gap:4px;padding:4px 9px;border-radius:999px;border:1px solid var(--primary);background:#FFFFFF;color:var(--primary);font-size:.6em;font-weight:700;text-decoration:none;flex-shrink:0}
 .site-pill:hover{background:var(--primary);color:#fff}
 .site-pill.current{background:var(--primary);color:#fff}
 @media(min-width:1150px){.site-network-track{justify-content:center}}
@@ -529,33 +529,33 @@ header{background:var(--primary);text-align:center;width:100%;box-shadow:0 2px 5
 main{width:100%;max-width:880px;margin:0 auto;padding:0 16px 10px;box-sizing:border-box}
 h1{font-size:1.8em;line-height:1.25;color:var(--primary);font-weight:900;margin:14px 0 8px;letter-spacing:-.3px}
 .byline{font-size:.74em;color:#777;font-weight:700;margin:0 0 6px}
-.lede{font-size:1.04em;color:#F4F4F5;font-weight:700;margin:14px 0 22px}
+.lede{font-size:1.04em;color:#111827;font-weight:700;margin:14px 0 22px}
 h2{font-size:1.35em;color:var(--primary);font-weight:900;margin:36px 0 12px;border-bottom:3px solid var(--mid);padding-bottom:8px}
 h3{font-size:1.06em;color:#1f4f48;font-weight:900;margin:24px 0 8px}
 p{margin:0 0 15px}
 ul{margin:0 0 18px;padding-left:22px}li{margin-bottom:7px}
 a{color:var(--primary);font-weight:700}
-strong{font-weight:900;color:#F4F4F5}
-.keyfacts{background:#121214;border:3px solid var(--primary);border-radius:9px;box-shadow:0 4px 16px rgba(0,0,0,.14);padding:18px 20px;margin:8px 0 26px}
+strong{font-weight:900;color:#111827}
+.keyfacts{background:#FFFFFF;border:3px solid var(--primary);border-radius:9px;box-shadow:0 4px 16px rgba(0,0,0,.14);padding:18px 20px;margin:8px 0 26px}
 .keyfacts h2{margin:0 0 12px;font-size:1em;border:none;padding:0;text-transform:uppercase;letter-spacing:.5px}
 .kf-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:12px}
 .kf-item{background:var(--light);border-radius:7px;padding:10px 12px}
-.kf-label{display:block;font-size:.64em;text-transform:uppercase;letter-spacing:.6px;color:#A1A1AA;font-weight:900}
+.kf-label{display:block;font-size:.64em;text-transform:uppercase;letter-spacing:.6px;color:#5B6575;font-weight:900}
 .kf-value{display:block;font-size:1.08em;font-weight:900;color:var(--primary)}
 .tablewrap{width:100%;overflow-x:auto;margin:0 0 22px}
-table.data{width:100%;border-collapse:collapse;background:#121214;border:3px solid var(--primary);border-radius:9px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.18);font-size:.88em}
+table.data{width:100%;border-collapse:collapse;background:#FFFFFF;border:3px solid var(--primary);border-radius:9px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.18);font-size:.88em}
 table.data th{background:var(--primary);color:#fff;padding:11px 8px;text-align:left;font-weight:900;white-space:nowrap}
 table.data td{padding:10px 8px;border-top:1px solid #e3e8e7}
 table.data tr:nth-child(even) td{background:var(--light)}
 table.data tr:hover td{background:rgba(255,255,255,0.04)}
 table.data td a{text-decoration:none}
-.this-row td{background:#1212148e1 !important;font-weight:900}
+.this-row td{background:#FFFFFF8e1 !important;font-weight:900}
 .callout{border-radius:8px;padding:15px 18px;margin:0 0 24px;font-size:.93em}
 .callout strong:first-child{display:block;margin-bottom:5px}
 .callout.tip{background:#e6f2f0;border-left:6px solid var(--primary)}
-.callout.warn{background:#1212144f4;border-left:6px solid var(--warn)}
-.callout.note{background:#1212148e1;border-left:6px solid #d9a441}
-details.faq{background:#121214;border-radius:8px;margin-bottom:9px;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+.callout.warn{background:#FFFFFF4f4;border-left:6px solid var(--warn)}
+.callout.note{background:#FFFFFF8e1;border-left:6px solid #d9a441}
+details.faq{background:#FFFFFF;border-radius:8px;margin-bottom:9px;box-shadow:0 2px 6px rgba(0,0,0,.08)}
 details.faq summary{cursor:pointer;padding:13px 16px;font-weight:900;color:var(--primary);font-size:.95em;list-style:none}
 details.faq summary::-webkit-details-marker{display:none}
 details.faq summary::before{content:"+ "}
@@ -564,14 +564,14 @@ details.faq .faq-body{padding:0 16px 14px;font-size:.92em}
 .cta-box{background:var(--primary);color:#fff;border-radius:10px;padding:22px;text-align:center;margin:32px 0;box-shadow:0 6px 18px rgba(0,0,0,.2)}
 .cta-box h3{color:#fff;margin:0 0 8px}
 .cta-box p{margin:0 0 14px;font-size:.9em;opacity:.95}
-.cta-btn{display:inline-block;background:#121214;color:var(--primary) !important;font-weight:900;padding:11px 24px;border-radius:7px;text-decoration:none}
+.cta-btn{display:inline-block;background:#FFFFFF;color:var(--primary) !important;font-weight:900;padding:11px 24px;border-radius:7px;text-decoration:none}
 .prevnext{display:flex;justify-content:space-between;gap:12px;margin:28px 0;flex-wrap:wrap}
-.prevnext a{background:#121214;border:2px solid var(--mid);border-radius:8px;padding:12px 16px;text-decoration:none;flex:1;min-width:200px;box-shadow:0 2px 6px rgba(0,0,0,.07)}
+.prevnext a{background:#FFFFFF;border:2px solid var(--mid);border-radius:8px;padding:12px 16px;text-decoration:none;flex:1;min-width:200px;box-shadow:0 2px 6px rgba(0,0,0,.07)}
 .prevnext a:hover{border-color:var(--primary)}
-.prevnext span{display:block;font-size:.66em;text-transform:uppercase;letter-spacing:.6px;color:#71717A;font-weight:900}
+.prevnext span{display:block;font-size:.66em;text-transform:uppercase;letter-spacing:.6px;color:#8B95A5;font-weight:900}
 .prevnext b{color:var(--primary);font-size:.95em}
-.disclaimer{font-size:.8em;color:#A1A1AA;margin:26px auto;line-height:1.55;background:#121214;border-radius:8px;padding:16px 18px;border:1px solid #27272A}
-.footer{margin-top:40px;padding:25px;background:#121214;width:100%;text-align:center;font-size:.9em;color:#A1A1AA;border-top:1px solid #27272A}
+.disclaimer{font-size:.8em;color:#5B6575;margin:26px auto;line-height:1.55;background:#FFFFFF;border-radius:8px;padding:16px 18px;border:1px solid #D8DEE8}
+.footer{margin-top:40px;padding:25px;background:#FFFFFF;width:100%;text-align:center;font-size:.9em;color:#5B6575;border-top:1px solid #D8DEE8}
 .footer a{color:var(--primary);text-decoration:none;margin:0 10px;font-weight:700}
 .tagline{margin:16px 0}
 .badge{display:inline-block;font-size:.68em;font-weight:900;text-transform:uppercase;letter-spacing:.5px;padding:4px 11px;border-radius:100px;margin-right:6px}
@@ -580,144 +580,155 @@ details.faq .faq-body{padding:0 16px 14px;font-size:.92em}
 .badge-tier{background:rgba(48,119,108,.1);color:var(--primary);border:1px solid var(--mid)}
 
 
-/* Force dark network chrome */
+
+/* Force light network chrome */
 :root {
-  --bg: #09090B !important;
-  --surface: #121214 !important;
-  --ink: #F4F4F5 !important;
-  --muted: #A1A1AA !important;
-  --line: #27272A !important;
-  --accent: #FF2E88 !important;
-  --paper: #09090B !important;
-  --paper-2: #121214 !important;
-  --ink-muted: #A1A1AA !important;
-  --text-primary: #F4F4F5 !important;
-  --text-secondary: #A1A1AA !important;
-  --bg-primary: #09090B !important;
-  --bg-secondary: #121214 !important;
-  --gold: #FF2E88 !important;
+  --bg: #F3F5F8 !important;
+  --surface: #FFFFFF !important;
+  --surface-2: #EEF1F5 !important;
+  --ink: #111827 !important;
+  --muted: #5B6575 !important;
+  --line: #D8DEE8 !important;
+  --accent: #BE185D !important;
+  --paper: #F3F5F8 !important;
+  --paper-2: #FFFFFF !important;
+  --ink-muted: #5B6575 !important;
+  --ink-faint: #8B95A5 !important;
+  --header: #FFFFFF !important;
+  --header-ink: #111827 !important;
+  --text-primary: #111827 !important;
+  --text-secondary: #5B6575 !important;
+  --bg-primary: #F3F5F8 !important;
+  --bg-secondary: #FFFFFF !important;
+  --gold: #BE185D !important;
   --gold2: var(--accent-hover) !important;
-  --green: #FF2E88 !important;
-  --primary: #FF2E88 !important;
-  --navy: #000000 !important;
-  --brand: #000000 !important;
-  --light: #121214 !important;
+  --green: #BE185D !important;
+  --primary: #BE185D !important;
+  --navy: #111827 !important;
+  --brand: #111827 !important;
+  --light: #FFFFFF !important;
+  --on-accent: #FFFFFF !important;
 }
 body {
-  background: var(--bg) !important;
-  color: var(--ink) !important;
+  background: #F3F5F8 !important;
+  color: #111827 !important;
 }
 header, .nx-header {
-  background: var(--header) !important;
-  color: var(--header-ink) !important;
-  border-bottom: 2px solid #FF2E88 !important;
+  background: #FFFFFF !important;
+  color: #111827 !important;
+  border-bottom: 2px solid #BE185D !important;
 }
-.logo, .nx-logo, .logo-text { color: var(--header-ink) !important; }
-.logo span, .nx-logo span { color: #FF2E88 !important; }
-.logo-sub, .nx-tagline { color: rgba(250,250,250,0.55) !important; }
-.header-link, .nx-nav a { color: var(--header-ink) !important; }
+.logo, .nx-logo, .logo-text { color: #111827 !important; }
+.logo span, .nx-logo span { color: #BE185D !important; }
+.logo-sub, .nx-tagline { color: #5B6575 !important; }
+.header-link, .nx-nav a {
+  color: #111827 !important;
+  border-color: #B8C0CE !important;
+  background: transparent !important;
+}
 .header-link:hover, .nx-nav a:hover {
-  background: #FF2E88 !important;
-  color: #000 !important;
-  border-color: #FF2E88 !important;
+  background: #BE185D !important;
+  color: #FFFFFF !important;
+  border-color: #BE185D !important;
 }
 .hero, .nx-hero, main > .hero, section.hero, .main-h1 {
-  background: var(--bg) !important;
-  color: var(--ink) !important;
+  background: #F3F5F8 !important;
+  color: #111827 !important;
 }
 .hero h1, .nx-hero h1, section.hero h1, h1 {
-  color: var(--ink) !important;
+  color: #111827 !important;
 }
 .hero-desc, .nx-support, .intro-text, .disclaimer, .col-name, .chip-label,
 .site-network-label, .table-meta, .footer, footer {
-  color: var(--muted) !important;
+  color: #5B6575 !important;
 }
 .site-network-bar {
-  background: var(--surface) !important;
-  border-bottom: 1px solid var(--line) !important;
+  background: #FFFFFF !important;
+  border-bottom: 1px solid #D8DEE8 !important;
 }
 .site-pill {
   background: transparent !important;
-  color: var(--ink) !important;
-  border: 1px solid var(--line-strong) !important;
+  color: #111827 !important;
+  border: 1px solid #B8C0CE !important;
   border-radius: 0 !important;
 }
 .site-pill:hover {
-  background: var(--accent-soft) !important;
-  color: #FF2E88 !important;
-  border-color: #FF2E88 !important;
+  background: rgba(0,0,0,0.04) !important;
+  color: #BE185D !important;
+  border-color: #BE185D !important;
 }
 .site-pill.current {
-  background: #FF2E88 !important;
-  color: #000 !important;
-  border-color: #FF2E88 !important;
+  background: #BE185D !important;
+  color: #FFFFFF !important;
+  border-color: #BE185D !important;
 }
 .chip {
-  background: var(--surface) !important;
-  color: var(--ink) !important;
-  border-color: #FF2E88 !important;
+  background: #FFFFFF !important;
+  color: #111827 !important;
+  border-color: #BE185D !important;
 }
 .chip:hover, .chip.active {
-  background: #FF2E88 !important;
-  color: #000 !important;
+  background: #BE185D !important;
+  color: #FFFFFF !important;
 }
 #filters input, #filters select, #searchInput, #searchFilter, #etfSearch,
 input[type="text"], input[type="search"], select, textarea {
-  background: var(--surface) !important;
-  color: var(--ink) !important;
-  border-color: var(--line-strong) !important;
+  background: #FFFFFF !important;
+  color: #111827 !important;
+  border-color: #B8C0CE !important;
 }
 #filters input::placeholder, input::placeholder {
-  color: var(--ink-faint) !important;
+  color: #8B95A5 !important;
 }
 #etfTable, table.etf-table, .peer-table, #holdings-table, table.ret, table.hublist {
-  background: var(--surface) !important;
-  border-color: var(--line) !important;
-  color: var(--ink) !important;
+  background: #FFFFFF !important;
+  border-color: #D8DEE8 !important;
+  color: #111827 !important;
 }
 #etfTable th, table th, thead th {
-  background: #000 !important;
-  color: #FF2E88 !important;
-  border-bottom-color: #FF2E88 !important;
+  background: #111827 !important;
+  color: #FFFFFF !important;
+  border-bottom-color: #BE185D !important;
 }
 #etfTable td, table td {
-  color: var(--ink) !important;
-  border-bottom-color: var(--line) !important;
+  color: #111827 !important;
+  border-bottom-color: #D8DEE8 !important;
 }
 #etfTable tbody tr:nth-child(even), table tbody tr:nth-child(even),
 tr:nth-child(even) {
-  background: #161618 !important;
+  background: #EEF1F5 !important;
 }
 #etfTable tbody tr:hover, table tbody tr:hover, tr:hover {
-  background: var(--accent-soft) !important;
+  background: rgba(0,0,0,0.03) !important;
 }
 .symbol, .symbol a, .symbol a:visited, .col-ticker, .col-ticker a,
 .yield, .decay, td:before, .tracker-link {
-  color: #FF2E88 !important;
+  color: #BE185D !important;
 }
 .footer a, footer a, a.tracker-link {
-  color: #FF2E88 !important;
+  color: #BE185D !important;
 }
 .stat, .faq, .rel, .info-card, .card, .panel {
-  background: var(--surface) !important;
-  color: var(--ink) !important;
-  border-color: var(--line) !important;
+  background: #FFFFFF !important;
+  color: #111827 !important;
+  border-color: #D8DEE8 !important;
 }
-.vote-count, #voteMsg { color: #FF2E88 !important; }
+.vote-count, #voteMsg { color: #BE185D !important; }
 .back-to-top {
   background: transparent !important;
-  color: #FF2E88 !important;
-  border: 1px solid #FF2E88 !important;
+  color: #BE185D !important;
+  border: 1px solid #BE185D !important;
 }
 .back-to-top:hover {
-  background: #FF2E88 !important;
-  color: #000 !important;
+  background: #BE185D !important;
+  color: #FFFFFF !important;
 }
 .watchlist-btn, .header-pro-btn, #resetFilters, #resetBtn {
-  background: #FF2E88 !important;
-  color: #000 !important;
-  border-color: #FF2E88 !important;
+  background: #BE185D !important;
+  color: #FFFFFF !important;
+  border-color: #BE185D !important;
 }
+
 </style>
 <script type="application/ld+json">
 {
@@ -893,7 +904,7 @@ tr:nth-child(even) {
   </p>
   <div class="tagline">
     <a href="https://dividendempire2000.gumroad.com/l/DividendTracker?layout=profile" target="_blank" rel="noopener"
-       style="display:inline-block;background:#FF2E88;color:#fff !important;font-weight:900;font-size:.78em;padding:5px 12px;border-radius:5px;text-decoration:none;margin:20px 0;box-shadow:0 2px 6px rgba(0,0,0,.15)">
+       style="display:inline-block;background:#BE185D;color:#fff !important;font-weight:900;font-size:.78em;padding:5px 12px;border-radius:5px;text-decoration:none;margin:20px 0;box-shadow:0 2px 6px rgba(0,0,0,.15)">
        Best Monthly Dividend Tracker!
     </a>
   </div>

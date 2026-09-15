@@ -14,9 +14,9 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/monthly-payout/favicon-16x16.png">
   <link rel="icon" href="/monthly-payout/favicon.ico">
   <link rel="manifest" href="/monthly-payout/site.webmanifest">
-  <link rel="mask-icon" href="/monthly-payout/safari-pinned-tab.svg" color="#FF2E88">
-  <meta name="msapplication-TileColor" content="#FF2E88">
-  <meta name="theme-color" content="#FF2E88">
+  <link rel="mask-icon" href="/monthly-payout/safari-pinned-tab.svg" color="#BE185D">
+  <meta name="msapplication-TileColor" content="#BE185D">
+  <meta name="theme-color" content="#BE185D">
 
   <!-- Open Graph / Twitter Card -->
   <meta property="og:title" content="Top 100+ Monthly Dividend ETFs" />
@@ -58,27 +58,27 @@
     <style>
 /* mrvn ETF Network — shared design system (inline per repo for GitHub Pages) */
 :root {
-  /* Canonical tokens */
-  --bg: #09090B;
-  --surface: #121214;
-  --surface-2: #161618;
-  --ink: #F4F4F5;
-  --muted: #A1A1AA;
-  --line: #27272A;
-  --accent: #FF2E88;
-  /* Extended / legacy aliases (same values) */
+  /* Canonical tokens — light theme */
+  --bg: #F3F5F8;
+  --surface: #FFFFFF;
+  --surface-2: #EEF1F5;
+  --ink: #111827;
+  --muted: #5B6575;
+  --line: #D8DEE8;
+  --accent: #BE185D;
+  /* Extended / legacy aliases */
   --ink-muted: var(--muted);
-  --ink-faint: #71717A;
+  --ink-faint: #8B95A5;
   --paper: var(--bg);
   --paper-2: var(--surface);
-  --line-strong: #3F3F46;
-  --header: #000000;
-  --header-ink: #FAFAFA;
-  --accent-soft: rgba(255, 46, 136, 0.14);
-  --accent-hover: #FF5CA6;
-  --on-accent: #000000;
-  --danger: #FF4D6A;
-  --pos: #FF2E88;
+  --line-strong: #B8C0CE;
+  --header: #FFFFFF;
+  --header-ink: #111827;
+  --accent-soft: rgba(190, 24, 93, 0.10);
+  --accent-hover: #9D174D;
+  --on-accent: #FFFFFF;
+  --danger: #DC2626;
+  --pos: #BE185D;
   --shell: 94%;
   --shell-max: 1320px;
   --radius: 0;
@@ -86,18 +86,18 @@
   --font-display: "Syne", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
   /* aliases for legacy site CSS */
-  --brand: var(--header);
-  --brand-dark: #000000;
-  --brand-mid: var(--surface);
-  --brand-lite: #1A1A1E;
+  --brand: var(--header-ink);
+  --brand-dark: #111827;
+  --brand-mid: var(--surface-2);
+  --brand-lite: #F8FAFC;
   --gold: var(--accent);
   --gold2: var(--accent-hover);
-  --navy: var(--header);
+  --navy: var(--header-ink);
   --primary: var(--accent);
   --green: var(--accent);
   --purple: var(--accent);
   --purple-bright: var(--accent-hover);
-  --purple-deep: var(--header);
+  --purple-deep: var(--header-ink);
   --bg-primary: var(--bg);
   --bg-secondary: var(--surface);
   --bg-panel: var(--surface);
@@ -133,7 +133,7 @@ body {
 a { color: var(--accent); }
 a:hover { color: var(--accent-hover); }
 
-/* Wordmark header */
+/* Wordmark header — light */
 .nx-header, header.nx-header, body > header:not(.nx-skip) {
   width: 100%;
   background: var(--header);
@@ -159,7 +159,7 @@ a:hover { color: var(--accent-hover); }
   font-weight: 500;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(250, 250, 250, 0.55);
+  color: var(--muted);
   margin-top: 0.45rem;
 }
 .logo-link { text-decoration: none; display: inline-block; }
@@ -175,7 +175,7 @@ a:hover { color: var(--accent-hover); }
   align-items: center;
   gap: 0.35rem;
   padding: 0.45rem 0.85rem;
-  border: 1px solid rgba(255,255,255,0.28);
+  border: 1px solid var(--line-strong);
   border-radius: var(--radius);
   color: var(--header-ink);
   background: transparent;
@@ -414,8 +414,8 @@ input[type="text"], select {
   overflow: hidden;
 }
 #etfTable th, table th, thead th {
-  background: #000 !important;
-  color: var(--accent) !important;
+  background: var(--header-ink) !important;
+  color: #FFFFFF !important;
   font-family: var(--font-mono);
   font-weight: 700;
   font-size: 0.68rem;
@@ -541,8 +541,8 @@ input[type="text"], select {
             }
         }
         html, body{margin:0;padding:0;overflow-x:hidden !important;width:100%;position:relative}
-        :root{--primary:#FF2E88;--light:#121214;--mid:#A1A1AA;--accent:#FF2E88;--gray:#71717A}
-        body{font-family:'Syne',Arial,sans-serif;background:var(--light);color:#F4F4F5;display:flex;flex-direction:column;align-items:center;min-height:100vh;font-size:1rem}
+        :root{--primary:#BE185D;--light:#FFFFFF;--mid:#5B6575;--accent:#BE185D;--gray:#8B95A5}
+        body{font-family:'Syne',Arial,sans-serif;background:var(--light);color:#111827;display:flex;flex-direction:column;align-items:center;min-height:100vh;font-size:1rem}
         header{background:var(--primary);padding:0;text-align:center;width:100%;box-shadow:0 2px 5px rgba(0,0,0,.3);background-image:url('https://www.transparenttextures.com/patterns/noise.png');background-blend-mode:overlay;cursor:pointer;position:sticky;top:0;z-index:10}
         
         .banner-img {
@@ -569,13 +569,13 @@ input[type="text"], select {
         .main-h1 span a:hover{color:#8e1c1c}
         .content{width:95%;max-width:1150px;margin:0 auto;display:flex;flex-direction:column;align-items:center}
         #filters{max-width:1150px;margin:11px auto 22px;display:flex;flex-wrap:wrap;gap:13px;justify-content:center;align-items:center}
-        .top-disclaimer{max-width:870px;margin:22px auto 16px;padding:0 16px;text-align:center;font-size:0.71em;line-height:1.6;color:#F4F4F5}
+        .top-disclaimer{max-width:870px;margin:22px auto 16px;padding:0 16px;text-align:center;font-size:0.71em;line-height:1.6;color:#111827}
         .top-disclaimer strong{color:#c62828;font-weight:900}
-        .top-disclaimer .highlight{background:#1212148e1;padding:2px 6px;border-radius:4px;font-weight:900;color:#d32f2f}
-        #etfTable{width:100%;max-width:100%;margin:0 auto;border-collapse:collapse;background:#121214;border:3px solid var(--primary);border-radius:9px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.22)}
+        .top-disclaimer .highlight{background:#FFFFFF8e1;padding:2px 6px;border-radius:4px;font-weight:900;color:#d32f2f}
+        #etfTable{width:100%;max-width:100%;margin:0 auto;border-collapse:collapse;background:#FFFFFF;border:3px solid var(--primary);border-radius:9px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.22)}
         th{background:var(--primary);color:#fff;padding:11px 5px;font-size:0.95em;cursor:pointer;white-space:nowrap;position:relative}
         td{padding:9px 5px;font-size:1em;text-align:center}
-        tr.odd {background:#121214;}
+        tr.odd {background:#FFFFFF;}
         tr.even{background:var(--light);}
         tr:hover{background:rgba(255,255,255,0.04) !important;}
         tr[data-symbol]{cursor:pointer;}
@@ -584,20 +584,20 @@ input[type="text"], select {
         .aum{font-weight:bold;color:var(--primary)}
         .decay{font-weight:bold;color:#000 !important}
         @media(min-width:769px){th,td{padding:15px 9px;font-size:1.1em}}
-        @media(max-width:768px){th{display:none}tr{display:flex;flex-direction:column;background:#121214;border-radius:6px;margin:8px 0;padding:10px;box-shadow:0 2px 8px rgba(0,0,0,.1)}td{display:flex;justify-content:space-between;padding:4px 0;font-size:.9em}td:before{content:attr(data-label);font-weight:bold;color:var(--primary);min-width:110px}}
+        @media(max-width:768px){th{display:none}tr{display:flex;flex-direction:column;background:#FFFFFF;border-radius:6px;margin:8px 0;padding:10px;box-shadow:0 2px 8px rgba(0,0,0,.1)}td{display:flex;justify-content:space-between;padding:4px 0;font-size:.9em}td:before{content:attr(data-label);font-weight:bold;color:var(--primary);min-width:110px}}
 
         #resetFilters{padding:8px 16px;background:var(--primary);color:#fff;border-radius:6px;cursor:pointer;font-weight:bold;border:none;font-size:0.95em}
-        #resetFilters:hover{background:#FF2E88}
+        #resetFilters:hover{background:#BE185D}
         select,input{padding:8px 12px;border-radius:6px;border:1px solid #ccc;font-size:0.95em}
-        .disclaimer{font-size:.9em;color:#A1A1AA;margin:20px auto;max-width:900px;line-height:1.5;text-align:center}
+        .disclaimer{font-size:.9em;color:#5B6575;margin:20px auto;max-width:900px;line-height:1.5;text-align:center}
         .back-to-top{display:block;margin:12px auto 0;padding:7px 14px;background:var(--primary);color:#fff;font-weight:700;font-size:0.82em;border-radius:6px;text-decoration:none;box-shadow:0 3px 8px rgba(0,0,0,.2);transition:all .2s;cursor:pointer}
-        .back-to-top:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(0,0,0,.3);background:#FF2E88}
-        .footer{margin-top:40px;padding:25px;background:#121214;width:100%;text-align:center;font-size:0.9em;color:#A1A1AA;border-top:1px solid #27272A}
+        .back-to-top:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(0,0,0,.3);background:#BE185D}
+        .footer{margin-top:40px;padding:25px;background:#FFFFFF;width:100%;text-align:center;font-size:0.9em;color:#5B6575;border-top:1px solid #D8DEE8}
         .footer a{color:var(--primary);text-decoration:none;margin:0 12px;font-weight:700}
         .footer a:hover{text-decoration:underline}
         .footer .tagline{font-size:1.3em;font-weight:900;color:var(--primary);margin:20px 0}
         .footer .tagline a{color:var(--primary);text-decoration:none}
-        .loading{text-align:center;padding:40px;font-size:1.3em;color:#A1A1AA}
+        .loading{text-align:center;padding:40px;font-size:1.3em;color:#5B6575}
 
         /* Hub page link under the table */
         .hub-link{
@@ -605,7 +605,7 @@ input[type="text"], select {
             margin:20px auto 0;
             padding:14px 18px;
             max-width:760px;
-            background:#121214;
+            background:#FFFFFF;
             border:2px solid var(--mid);
             border-radius:9px;
             box-shadow:0 2px 8px rgba(0,0,0,.08);
@@ -646,7 +646,7 @@ input[type="text"], select {
         .sponsored-label {
             text-align: center;
             font-size: 0.78em;
-            color: #A1A1AA;
+            color: #5B6575;
             margin: 4px auto 16px;
             max-width: 776px;
             font-style: italic;
@@ -692,156 +692,167 @@ input[type="text"], select {
         /* ────────────────────────────────────── END SPONSOR BANNER ────────────────────────────────────── */
 
         /* ────────────────────────────────────── SITE NETWORK BAR ────────────────────────────────────── */
-        .site-network-bar{width:100%;background:#121214;border-bottom:1px solid #27272A;padding:6px 0;}
+        .site-network-bar{width:100%;background:#FFFFFF;border-bottom:1px solid #D8DEE8;padding:6px 0;}
         .site-network-track{max-width:1150px;margin:0 auto;padding:0 15px;display:flex;align-items:center;justify-content:flex-start;gap:6px;overflow-x:auto;white-space:nowrap;-ms-overflow-style:none;scrollbar-width:none;}
         .site-network-track::-webkit-scrollbar{display:none;}
         .site-network-track::after{content:"";flex:0 0 4px;}
-        .site-network-label{font-size:0.51em;text-transform:uppercase;letter-spacing:0.5px;color:#71717A;font-weight:900;flex-shrink:0;margin-right:2px;}
-        .site-pill{display:inline-flex;align-items:center;gap:4px;padding:4px 9px;border-radius:999px;border:1px solid var(--primary);background:#121214;color:var(--primary);font-size:0.6em;font-weight:700;text-decoration:none;flex-shrink:0;transition:background .15s ease, color .15s ease;box-sizing:border-box;}
+        .site-network-label{font-size:0.51em;text-transform:uppercase;letter-spacing:0.5px;color:#8B95A5;font-weight:900;flex-shrink:0;margin-right:2px;}
+        .site-pill{display:inline-flex;align-items:center;gap:4px;padding:4px 9px;border-radius:999px;border:1px solid var(--primary);background:#FFFFFF;color:var(--primary);font-size:0.6em;font-weight:700;text-decoration:none;flex-shrink:0;transition:background .15s ease, color .15s ease;box-sizing:border-box;}
         .site-pill:hover{background:var(--primary);color:#fff;}
         .site-pill.current{background:var(--primary);color:#fff;cursor:default;}
         @media(min-width:1150px){.site-network-track{justify-content:center;}}
         /* ────────────────────────────────────── END SITE NETWORK BAR ────────────────────────────────────── */
     
 
-/* Force dark network chrome */
+
+/* Force light network chrome */
 :root {
-  --bg: #09090B !important;
-  --surface: #121214 !important;
-  --ink: #F4F4F5 !important;
-  --muted: #A1A1AA !important;
-  --line: #27272A !important;
-  --accent: #FF2E88 !important;
-  --paper: #09090B !important;
-  --paper-2: #121214 !important;
-  --ink-muted: #A1A1AA !important;
-  --text-primary: #F4F4F5 !important;
-  --text-secondary: #A1A1AA !important;
-  --bg-primary: #09090B !important;
-  --bg-secondary: #121214 !important;
-  --gold: #FF2E88 !important;
+  --bg: #F3F5F8 !important;
+  --surface: #FFFFFF !important;
+  --surface-2: #EEF1F5 !important;
+  --ink: #111827 !important;
+  --muted: #5B6575 !important;
+  --line: #D8DEE8 !important;
+  --accent: #BE185D !important;
+  --paper: #F3F5F8 !important;
+  --paper-2: #FFFFFF !important;
+  --ink-muted: #5B6575 !important;
+  --ink-faint: #8B95A5 !important;
+  --header: #FFFFFF !important;
+  --header-ink: #111827 !important;
+  --text-primary: #111827 !important;
+  --text-secondary: #5B6575 !important;
+  --bg-primary: #F3F5F8 !important;
+  --bg-secondary: #FFFFFF !important;
+  --gold: #BE185D !important;
   --gold2: var(--accent-hover) !important;
-  --green: #FF2E88 !important;
-  --primary: #FF2E88 !important;
-  --navy: #000000 !important;
-  --brand: #000000 !important;
-  --light: #121214 !important;
+  --green: #BE185D !important;
+  --primary: #BE185D !important;
+  --navy: #111827 !important;
+  --brand: #111827 !important;
+  --light: #FFFFFF !important;
+  --on-accent: #FFFFFF !important;
 }
 body {
-  background: var(--bg) !important;
-  color: var(--ink) !important;
+  background: #F3F5F8 !important;
+  color: #111827 !important;
 }
 header, .nx-header {
-  background: var(--header) !important;
-  color: var(--header-ink) !important;
-  border-bottom: 2px solid #FF2E88 !important;
+  background: #FFFFFF !important;
+  color: #111827 !important;
+  border-bottom: 2px solid #BE185D !important;
 }
-.logo, .nx-logo, .logo-text { color: var(--header-ink) !important; }
-.logo span, .nx-logo span { color: #FF2E88 !important; }
-.logo-sub, .nx-tagline { color: rgba(250,250,250,0.55) !important; }
-.header-link, .nx-nav a { color: var(--header-ink) !important; }
+.logo, .nx-logo, .logo-text { color: #111827 !important; }
+.logo span, .nx-logo span { color: #BE185D !important; }
+.logo-sub, .nx-tagline { color: #5B6575 !important; }
+.header-link, .nx-nav a {
+  color: #111827 !important;
+  border-color: #B8C0CE !important;
+  background: transparent !important;
+}
 .header-link:hover, .nx-nav a:hover {
-  background: #FF2E88 !important;
-  color: #000 !important;
-  border-color: #FF2E88 !important;
+  background: #BE185D !important;
+  color: #FFFFFF !important;
+  border-color: #BE185D !important;
 }
 .hero, .nx-hero, main > .hero, section.hero, .main-h1 {
-  background: var(--bg) !important;
-  color: var(--ink) !important;
+  background: #F3F5F8 !important;
+  color: #111827 !important;
 }
 .hero h1, .nx-hero h1, section.hero h1, h1 {
-  color: var(--ink) !important;
+  color: #111827 !important;
 }
 .hero-desc, .nx-support, .intro-text, .disclaimer, .col-name, .chip-label,
 .site-network-label, .table-meta, .footer, footer {
-  color: var(--muted) !important;
+  color: #5B6575 !important;
 }
 .site-network-bar {
-  background: var(--surface) !important;
-  border-bottom: 1px solid var(--line) !important;
+  background: #FFFFFF !important;
+  border-bottom: 1px solid #D8DEE8 !important;
 }
 .site-pill {
   background: transparent !important;
-  color: var(--ink) !important;
-  border: 1px solid var(--line-strong) !important;
+  color: #111827 !important;
+  border: 1px solid #B8C0CE !important;
   border-radius: 0 !important;
 }
 .site-pill:hover {
-  background: var(--accent-soft) !important;
-  color: #FF2E88 !important;
-  border-color: #FF2E88 !important;
+  background: rgba(0,0,0,0.04) !important;
+  color: #BE185D !important;
+  border-color: #BE185D !important;
 }
 .site-pill.current {
-  background: #FF2E88 !important;
-  color: #000 !important;
-  border-color: #FF2E88 !important;
+  background: #BE185D !important;
+  color: #FFFFFF !important;
+  border-color: #BE185D !important;
 }
 .chip {
-  background: var(--surface) !important;
-  color: var(--ink) !important;
-  border-color: #FF2E88 !important;
+  background: #FFFFFF !important;
+  color: #111827 !important;
+  border-color: #BE185D !important;
 }
 .chip:hover, .chip.active {
-  background: #FF2E88 !important;
-  color: #000 !important;
+  background: #BE185D !important;
+  color: #FFFFFF !important;
 }
 #filters input, #filters select, #searchInput, #searchFilter, #etfSearch,
 input[type="text"], input[type="search"], select, textarea {
-  background: var(--surface) !important;
-  color: var(--ink) !important;
-  border-color: var(--line-strong) !important;
+  background: #FFFFFF !important;
+  color: #111827 !important;
+  border-color: #B8C0CE !important;
 }
 #filters input::placeholder, input::placeholder {
-  color: var(--ink-faint) !important;
+  color: #8B95A5 !important;
 }
 #etfTable, table.etf-table, .peer-table, #holdings-table, table.ret, table.hublist {
-  background: var(--surface) !important;
-  border-color: var(--line) !important;
-  color: var(--ink) !important;
+  background: #FFFFFF !important;
+  border-color: #D8DEE8 !important;
+  color: #111827 !important;
 }
 #etfTable th, table th, thead th {
-  background: #000 !important;
-  color: #FF2E88 !important;
-  border-bottom-color: #FF2E88 !important;
+  background: #111827 !important;
+  color: #FFFFFF !important;
+  border-bottom-color: #BE185D !important;
 }
 #etfTable td, table td {
-  color: var(--ink) !important;
-  border-bottom-color: var(--line) !important;
+  color: #111827 !important;
+  border-bottom-color: #D8DEE8 !important;
 }
 #etfTable tbody tr:nth-child(even), table tbody tr:nth-child(even),
 tr:nth-child(even) {
-  background: #161618 !important;
+  background: #EEF1F5 !important;
 }
 #etfTable tbody tr:hover, table tbody tr:hover, tr:hover {
-  background: var(--accent-soft) !important;
+  background: rgba(0,0,0,0.03) !important;
 }
 .symbol, .symbol a, .symbol a:visited, .col-ticker, .col-ticker a,
 .yield, .decay, td:before, .tracker-link {
-  color: #FF2E88 !important;
+  color: #BE185D !important;
 }
 .footer a, footer a, a.tracker-link {
-  color: #FF2E88 !important;
+  color: #BE185D !important;
 }
 .stat, .faq, .rel, .info-card, .card, .panel {
-  background: var(--surface) !important;
-  color: var(--ink) !important;
-  border-color: var(--line) !important;
+  background: #FFFFFF !important;
+  color: #111827 !important;
+  border-color: #D8DEE8 !important;
 }
-.vote-count, #voteMsg { color: #FF2E88 !important; }
+.vote-count, #voteMsg { color: #BE185D !important; }
 .back-to-top {
   background: transparent !important;
-  color: #FF2E88 !important;
-  border: 1px solid #FF2E88 !important;
+  color: #BE185D !important;
+  border: 1px solid #BE185D !important;
 }
 .back-to-top:hover {
-  background: #FF2E88 !important;
-  color: #000 !important;
+  background: #BE185D !important;
+  color: #FFFFFF !important;
 }
 .watchlist-btn, .header-pro-btn, #resetFilters, #resetBtn {
-  background: #FF2E88 !important;
-  color: #000 !important;
-  border-color: #FF2E88 !important;
+  background: #BE185D !important;
+  color: #FFFFFF !important;
+  border-color: #BE185D !important;
 }
+
 </style>
 </head>
 <body>
@@ -884,8 +895,8 @@ tr:nth-child(even) {
     <a href="https://lsfunds.com/etfs/ovl" target="_blank" rel="sponsored noopener noreferrer">
         <img src="Revised Top Dividend Tools OVL ad.png" alt="Liquid Strategies OVL ETF">
     </a>
-    <small style="color:#A1A1AA; font-size:0.78em; font-weight:600;">Sponsored By</small>
-    <small style="color:#A1A1AA; font-size:0.78em; font-weight:400; text-align:center; max-width:100%; overflow-wrap:anywhere;">Read carefully before investing. Prospectus: <a href="https://lsfunds.com/hubfs/Regulatory/Prospectus.pdf?hsLang=en" target="_blank" rel="noopener noreferrer" style="color:#A1A1AA !important; font-family:inherit !important; font-size:inherit !important; font-weight:400 !important; text-shadow:none !important; background:none !important; letter-spacing:normal; text-decoration:underline !important;">https://lsfunds.com/hubfs/Regulatory/Prospectus.pdf?hsLang=en</a></small>
+    <small style="color:#5B6575; font-size:0.78em; font-weight:600;">Sponsored By</small>
+    <small style="color:#5B6575; font-size:0.78em; font-weight:400; text-align:center; max-width:100%; overflow-wrap:anywhere;">Read carefully before investing. Prospectus: <a href="https://lsfunds.com/hubfs/Regulatory/Prospectus.pdf?hsLang=en" target="_blank" rel="noopener noreferrer" style="color:#5B6575 !important; font-family:inherit !important; font-size:inherit !important; font-weight:400 !important; text-shadow:none !important; background:none !important; letter-spacing:normal; text-decoration:underline !important;">https://lsfunds.com/hubfs/Regulatory/Prospectus.pdf?hsLang=en</a></small>
 </div>
 
     <div id="filters">
@@ -929,8 +940,8 @@ tr:nth-child(even) {
     <a href="https://lsfunds.com/etfs/ovl" target="_blank" rel="sponsored noopener noreferrer">
         <img src="Revised Top Dividend Tools OVL ad.png" alt="Liquid Strategies OVL ETF">
     </a>
-    <small style="color:#A1A1AA; font-size:0.78em; font-weight:600;">Sponsored By</small>
-    <small style="color:#A1A1AA; font-size:0.78em; font-weight:400; text-align:center; max-width:100%; overflow-wrap:anywhere;">Read carefully before investing. Prospectus: <a href="https://lsfunds.com/hubfs/Regulatory/Prospectus.pdf?hsLang=en" target="_blank" rel="noopener noreferrer" style="color:#A1A1AA !important; font-family:inherit !important; font-size:inherit !important; font-weight:400 !important; text-shadow:none !important; background:none !important; letter-spacing:normal; text-decoration:underline !important;">https://lsfunds.com/hubfs/Regulatory/Prospectus.pdf?hsLang=en</a></small>
+    <small style="color:#5B6575; font-size:0.78em; font-weight:600;">Sponsored By</small>
+    <small style="color:#5B6575; font-size:0.78em; font-weight:400; text-align:center; max-width:100%; overflow-wrap:anywhere;">Read carefully before investing. Prospectus: <a href="https://lsfunds.com/hubfs/Regulatory/Prospectus.pdf?hsLang=en" target="_blank" rel="noopener noreferrer" style="color:#5B6575 !important; font-family:inherit !important; font-size:inherit !important; font-weight:400 !important; text-shadow:none !important; background:none !important; letter-spacing:normal; text-decoration:underline !important;">https://lsfunds.com/hubfs/Regulatory/Prospectus.pdf?hsLang=en</a></small>
 </div>
 
     <p class="disclaimer">
@@ -954,7 +965,7 @@ tr:nth-child(even) {
         </p>
         <div class="tagline">
             <a href="https://dividendempire2000.gumroad.com/l/DividendTracker?layout=profile" target="_blank" 
-               style="display:inline-block;background:#FF2E88;color:#ffffff !important;font-weight:900;font-size:0.78em;padding:5px 12px;border-radius:5px;text-decoration:none;transition:all .2s ease;margin:20px 0;box-shadow:0 2px 6px rgba(0,0,0,.15);"
+               style="display:inline-block;background:#BE185D;color:#ffffff !important;font-weight:900;font-size:0.78em;padding:5px 12px;border-radius:5px;text-decoration:none;transition:all .2s ease;margin:20px 0;box-shadow:0 2px 6px rgba(0,0,0,.15);"
                onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 5px 12px rgba(0,0,0,.25)'"
                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 6px rgba(0,0,0,.15)'">
                Best Monthly Dividend Tracker!
