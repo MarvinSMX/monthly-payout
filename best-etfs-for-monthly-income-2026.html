@@ -88,18 +88,25 @@
     <style>
 /* mrvn ETF Network — shared design system (inline per repo for GitHub Pages) */
 :root {
+  /* Canonical tokens */
+  --bg: #09090B;
+  --surface: #121214;
+  --surface-2: #161618;
   --ink: #F4F4F5;
-  --ink-muted: #A1A1AA;
-  --ink-faint: #71717A;
-  --paper: #09090B;
-  --paper-2: #121214;
+  --muted: #A1A1AA;
   --line: #27272A;
+  --accent: #FF2E88;
+  /* Extended / legacy aliases (same values) */
+  --ink-muted: var(--muted);
+  --ink-faint: #71717A;
+  --paper: var(--bg);
+  --paper-2: var(--surface);
   --line-strong: #3F3F46;
   --header: #000000;
   --header-ink: #FAFAFA;
-  --accent: #FF2E88;
   --accent-soft: rgba(255, 46, 136, 0.14);
   --accent-hover: #FF5CA6;
+  --on-accent: #000000;
   --danger: #FF4D6A;
   --pos: #FF2E88;
   --shell: 94%;
@@ -111,7 +118,7 @@
   /* aliases for legacy site CSS */
   --brand: var(--header);
   --brand-dark: #000000;
-  --brand-mid: #121214;
+  --brand-mid: var(--surface);
   --brand-lite: #1A1A1E;
   --gold: var(--accent);
   --gold2: var(--accent-hover);
@@ -121,14 +128,17 @@
   --purple: var(--accent);
   --purple-bright: var(--accent-hover);
   --purple-deep: var(--header);
-  --bg: var(--paper);
-  --bg-primary: var(--paper);
-  --bg-secondary: var(--paper-2);
-  --bg-panel: var(--paper-2);
-  --bg-panel-2: #161618;
+  --bg-primary: var(--bg);
+  --bg-secondary: var(--surface);
+  --bg-panel: var(--surface);
+  --bg-panel-2: var(--surface-2);
   --text-primary: var(--ink);
-  --text-secondary: var(--ink-muted);
+  --text-secondary: var(--muted);
   --text-muted: var(--ink-faint);
+  --border: var(--line);
+  --light: var(--surface);
+  --mid: var(--muted);
+  --gray: var(--ink-faint);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -141,7 +151,7 @@ html, body {
 }
 body {
   font-family: var(--font-sans);
-  background: var(--paper);
+  background: var(--bg);
   color: var(--ink);
   line-height: 1.55;
   min-height: 100vh;
@@ -179,7 +189,7 @@ a:hover { color: var(--accent-hover); }
   font-weight: 500;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(250, 250, 250, 0.42);
+  color: rgba(250, 250, 250, 0.55);
   margin-top: 0.45rem;
 }
 .logo-link { text-decoration: none; display: inline-block; }
@@ -210,13 +220,13 @@ a:hover { color: var(--accent-hover); }
 .header-link:hover, .nx-nav a:hover, .btn-ghost:hover {
   background: var(--accent);
   border-color: var(--accent);
-  color: #000;
+  color: var(--on-accent);
 }
 
 /* Network bar */
 .site-network-bar {
   width: 100%;
-  background: var(--paper-2);
+  background: var(--surface);
   border-bottom: 1px solid var(--line);
   padding: 0.5rem 0;
 }
@@ -266,7 +276,7 @@ a:hover { color: var(--accent-hover); }
 .site-pill.current {
   background: var(--accent);
   border-color: var(--accent);
-  color: #000;
+  color: var(--on-accent);
   cursor: default;
   font-weight: 700;
 }
@@ -277,7 +287,7 @@ a:hover { color: var(--accent-hover); }
 /* Hero */
 .nx-hero, .hero, .main-h1 {
   width: 100%;
-  background: var(--paper);
+  background: var(--bg);
   text-align: center;
   padding: 2.5rem 1.25rem 1.85rem;
   border-bottom: 1px solid var(--line);
@@ -296,7 +306,7 @@ a:hover { color: var(--accent-hover); }
 .nx-support, .hero-desc, .intro-text {
   max-width: 40rem;
   margin: 0 auto 1.25rem;
-  color: var(--ink-muted);
+  color: var(--muted);
   font-family: var(--font-mono);
   font-size: 0.82rem;
   line-height: 1.75;
@@ -306,7 +316,7 @@ a:hover { color: var(--accent-hover); }
   border: 1px solid var(--line-strong);
   border-radius: var(--radius);
   overflow: hidden;
-  background: var(--paper-2);
+  background: var(--surface);
 }
 .hero-stat {
   padding: 0.9rem 1.5rem;
@@ -357,7 +367,7 @@ a:hover { color: var(--accent-hover); }
   color: var(--ink);
 }
 .section-head p {
-  color: var(--ink-muted);
+  color: var(--muted);
   margin: 0;
   font-family: var(--font-mono);
   font-size: 0.8rem;
@@ -385,7 +395,7 @@ input[type="text"], select {
   border: 1px solid var(--line-strong);
   border-radius: var(--radius);
   padding: 0.55rem 0.75rem;
-  background: var(--paper-2);
+  background: var(--surface);
   color: var(--ink);
 }
 #filters input:focus, #searchInput:focus, #searchFilter:focus, #etfSearch:focus {
@@ -402,19 +412,19 @@ input[type="text"], select {
   padding: 0.5rem 0.85rem;
   border-radius: var(--radius);
   border: 1px solid var(--line-strong);
-  background: var(--paper-2);
+  background: var(--surface);
   color: var(--ink);
   cursor: pointer;
 }
 #resetFilters, #resetBtn {
   background: var(--accent);
-  color: #000;
+  color: var(--on-accent);
   border-color: var(--accent);
 }
 .special-btn.active, .special-btn:hover {
   background: var(--accent);
   border-color: var(--accent);
-  color: #000;
+  color: var(--on-accent);
 }
 #special-views {
   display: flex;
@@ -428,7 +438,7 @@ input[type="text"], select {
 #etfTable, table.etf-table, .peer-table, #holdings-table, table {
   width: 100%;
   border-collapse: collapse;
-  background: var(--paper-2);
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
@@ -455,7 +465,7 @@ input[type="text"], select {
   color: var(--ink);
 }
 #etfTable tbody tr:nth-child(even), table tbody tr:nth-child(even) {
-  background: #161618;
+  background: var(--surface-2);
 }
 #etfTable tbody tr:hover, table tbody tr:hover {
   background: var(--accent-soft);
@@ -473,7 +483,7 @@ input[type="text"], select {
   gap: 1rem;
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  color: var(--ink-muted);
+  color: var(--muted);
   margin: 0.35rem 0 0.65rem;
 }
 
@@ -483,11 +493,11 @@ input[type="text"], select {
   margin-top: auto;
   padding: 2rem 1.25rem 2.5rem;
   text-align: center;
-  color: var(--ink-muted);
+  color: var(--muted);
   font-family: var(--font-mono);
   font-size: 0.72rem;
   border-top: 1px solid var(--line);
-  background: var(--paper-2);
+  background: var(--surface);
 }
 .footer a, footer a {
   color: var(--accent);
@@ -512,13 +522,13 @@ input[type="text"], select {
 }
 .back-to-top:hover {
   background: var(--accent);
-  color: #000 !important;
+  color: var(--on-accent) !important;
 }
 
 /* Misc chrome */
 .watchlist-btn, .header-pro-btn {
   background: var(--accent) !important;
-  color: #000 !important;
+  color: var(--on-accent) !important;
   border: none !important;
   border-radius: var(--radius) !important;
   font-family: var(--font-mono) !important;
@@ -539,7 +549,7 @@ input[type="text"], select {
   width: 100%;
   background: var(--accent-soft);
   border-bottom: 1px solid var(--line);
-  color: var(--ink-muted);
+  color: var(--muted);
   font-family: var(--font-mono);
   font-size: 0.72rem;
   text-align: center;
@@ -553,10 +563,10 @@ input[type="text"], select {
 /* === end mrvn network design system === */
 
     :root {
-      --primary: #30776C;
-      --light: #EEF1F1;
-      --mid: #9BBCB6;
-      --accent: #62A196;
+      --primary: #FF2E88;
+      --light: #121214;
+      --mid: #A1A1AA;
+      --accent: #FF2E88;
       --danger: #c62828;
       --text: #222;
     }
@@ -585,7 +595,7 @@ input[type="text"], select {
     /* ── BREADCRUMB ── */
     .breadcrumb {
       max-width: 860px; margin: 14px auto 0; padding: 0 20px;
-      font-size: 0.82em; color: #555;
+      font-size: 0.82em; color: #A1A1AA;
     }
     .breadcrumb a { color: var(--primary); text-decoration: none; font-weight: 700; }
     .breadcrumb a:hover { text-decoration: underline; }
@@ -650,7 +660,7 @@ input[type="text"], select {
       max-width: 100%; height: auto; display: block; margin: 0 auto;
       border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.12);
     }
-    .sponsor-wrap .label { margin-top: 8px; font-size: 0.82rem; color: #555; font-weight: 500; }
+    .sponsor-wrap .label { margin-top: 8px; font-size: 0.82rem; color: #A1A1AA; font-weight: 500; }
 
     /* ── QUICK STATS ── */
     .stats-row {
@@ -671,7 +681,7 @@ input[type="text"], select {
       color: var(--primary); line-height: 1;
     }
     .stat-card .label {
-      font-size: 0.8em; color: #666; margin-top: 6px;
+      font-size: 0.8em; color: #A1A1AA; margin-top: 6px;
     }
 
     /* ── PROSE ── */
@@ -686,7 +696,7 @@ input[type="text"], select {
       color: #1d4d46; margin: 28px 0 8px;
     }
     p { margin: 0 0 18px; }
-    strong { color: #111; }
+    strong { color: #F4F4F5; }
     a { color: var(--primary); font-weight: 700; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
@@ -715,7 +725,7 @@ input[type="text"], select {
       text-align: center;
       padding: 40px;
       font-size: 1.1em;
-      color: #555;
+      color: #A1A1AA;
     }
     #top10Table {
       width: 100%;
@@ -759,7 +769,7 @@ input[type="text"], select {
     .table-disclaimer {
       padding: 12px 20px;
       font-size: 0.75em;
-      color: #666;
+      color: #A1A1AA;
       border-top: 1px solid #e0e8e7;
       background: #f7faf9;
     }
@@ -776,7 +786,7 @@ input[type="text"], select {
     .type-card h3 { margin: 0 0 8px; }
     .type-card p { margin: 0 0 10px; }
     .type-card p:last-child { margin: 0; }
-    .type-meta { font-size: 0.85em; color: #555; }
+    .type-meta { font-size: 0.85em; color: #A1A1AA; }
     .type-meta strong { color: var(--primary); }
 
     /* ── CALL-OUT BOX ── */
@@ -842,7 +852,7 @@ input[type="text"], select {
     }
     .promo-card .icon { font-size: 2em; margin-bottom: 10px; }
     .promo-card h3 { margin: 0 0 8px; font-size: 1em; color: var(--primary); }
-    .promo-card p { font-size: 0.84em; color: #555; margin: 0 0 14px; }
+    .promo-card p { font-size: 0.84em; color: #A1A1AA; margin: 0 0 14px; }
     .promo-card a.btn {
       display: inline-block;
       background: var(--primary); color: #fff;
@@ -869,10 +879,10 @@ input[type="text"], select {
     /* ── FOOTER ── */
     footer {
       background: #121214;
-      border-top: 1px solid #ddd;
+      border-top: 1px solid #27272A;
       text-align: center;
       padding: 32px 20px;
-      font-size: 0.88em; color: #555;
+      font-size: 0.88em; color: #A1A1AA;
       margin-top: 40px;
     }
     footer a { color: var(--primary); font-weight: 700; margin: 0 8px; }
@@ -894,7 +904,7 @@ input[type="text"], select {
       border-radius: 8px;
       padding: 14px 18px;
       font-size: 0.8em;
-      color: #555;
+      color: #A1A1AA;
       margin: 28px 0;
       text-align: center;
     }
@@ -910,8 +920,30 @@ input[type="text"], select {
   
 
 /* Force dark network chrome */
+:root {
+  --bg: #09090B !important;
+  --surface: #121214 !important;
+  --ink: #F4F4F5 !important;
+  --muted: #A1A1AA !important;
+  --line: #27272A !important;
+  --accent: #FF2E88 !important;
+  --paper: #09090B !important;
+  --paper-2: #121214 !important;
+  --ink-muted: #A1A1AA !important;
+  --text-primary: #F4F4F5 !important;
+  --text-secondary: #A1A1AA !important;
+  --bg-primary: #09090B !important;
+  --bg-secondary: #121214 !important;
+  --gold: #FF2E88 !important;
+  --gold2: var(--accent-hover) !important;
+  --green: #FF2E88 !important;
+  --primary: #FF2E88 !important;
+  --navy: #000000 !important;
+  --brand: #000000 !important;
+  --light: #121214 !important;
+}
 body {
-  background: var(--paper) !important;
+  background: var(--bg) !important;
   color: var(--ink) !important;
 }
 header, .nx-header {
@@ -919,22 +951,112 @@ header, .nx-header {
   color: var(--header-ink) !important;
   border-bottom: 2px solid #FF2E88 !important;
 }
-.hero, .nx-hero, main > .hero, section.hero {
-  background: var(--paper) !important;
+.logo, .nx-logo, .logo-text { color: var(--header-ink) !important; }
+.logo span, .nx-logo span { color: #FF2E88 !important; }
+.logo-sub, .nx-tagline { color: rgba(250,250,250,0.55) !important; }
+.header-link, .nx-nav a { color: var(--header-ink) !important; }
+.header-link:hover, .nx-nav a:hover {
+  background: #FF2E88 !important;
+  color: #000 !important;
+  border-color: #FF2E88 !important;
+}
+.hero, .nx-hero, main > .hero, section.hero, .main-h1 {
+  background: var(--bg) !important;
   color: var(--ink) !important;
 }
-.hero h1, .nx-hero h1, section.hero h1 {
+.hero h1, .nx-hero h1, section.hero h1, h1 {
   color: var(--ink) !important;
-  font-family: var(--font-display) !important;
-  text-transform: uppercase !important;
-  letter-spacing: -0.045em !important;
 }
-.hero-desc, .nx-support, .intro-text { color: var(--ink-muted) !important; }
+.hero-desc, .nx-support, .intro-text, .disclaimer, .col-name, .chip-label,
+.site-network-label, .table-meta, .footer, footer {
+  color: var(--muted) !important;
+}
+.site-network-bar {
+  background: var(--surface) !important;
+  border-bottom: 1px solid var(--line) !important;
+}
+.site-pill {
+  background: transparent !important;
+  color: var(--ink) !important;
+  border: 1px solid var(--line-strong) !important;
+  border-radius: 0 !important;
+}
+.site-pill:hover {
+  background: var(--accent-soft) !important;
+  color: #FF2E88 !important;
+  border-color: #FF2E88 !important;
+}
+.site-pill.current {
+  background: #FF2E88 !important;
+  color: #000 !important;
+  border-color: #FF2E88 !important;
+}
+.chip {
+  background: var(--surface) !important;
+  color: var(--ink) !important;
+  border-color: #FF2E88 !important;
+}
+.chip:hover, .chip.active {
+  background: #FF2E88 !important;
+  color: #000 !important;
+}
+#filters input, #filters select, #searchInput, #searchFilter, #etfSearch,
+input[type="text"], input[type="search"], select, textarea {
+  background: var(--surface) !important;
+  color: var(--ink) !important;
+  border-color: var(--line-strong) !important;
+}
+#filters input::placeholder, input::placeholder {
+  color: var(--ink-faint) !important;
+}
+#etfTable, table.etf-table, .peer-table, #holdings-table, table.ret, table.hublist {
+  background: var(--surface) !important;
+  border-color: var(--line) !important;
+  color: var(--ink) !important;
+}
 #etfTable th, table th, thead th {
   background: #000 !important;
   color: #FF2E88 !important;
+  border-bottom-color: #FF2E88 !important;
 }
-
+#etfTable td, table td {
+  color: var(--ink) !important;
+  border-bottom-color: var(--line) !important;
+}
+#etfTable tbody tr:nth-child(even), table tbody tr:nth-child(even),
+tr:nth-child(even) {
+  background: #161618 !important;
+}
+#etfTable tbody tr:hover, table tbody tr:hover, tr:hover {
+  background: var(--accent-soft) !important;
+}
+.symbol, .symbol a, .symbol a:visited, .col-ticker, .col-ticker a,
+.yield, .decay, td:before, .tracker-link {
+  color: #FF2E88 !important;
+}
+.footer a, footer a, a.tracker-link {
+  color: #FF2E88 !important;
+}
+.stat, .faq, .rel, .info-card, .card, .panel {
+  background: var(--surface) !important;
+  color: var(--ink) !important;
+  border-color: var(--line) !important;
+}
+.vote-count, #voteMsg { color: #FF2E88 !important; }
+.back-to-top {
+  background: transparent !important;
+  color: #FF2E88 !important;
+  border: 1px solid #FF2E88 !important;
+}
+.back-to-top:hover {
+  background: #FF2E88 !important;
+  color: #000 !important;
+}
+.watchlist-btn, .header-pro-btn, #resetFilters, #resetBtn {
+  background: #FF2E88 !important;
+  color: #000 !important;
+  border-color: #FF2E88 !important;
+}
 </style>
 </head>
 <body>
@@ -1131,7 +1253,7 @@ header, .nx-header {
     </tbody>
   </table>
 
-  <p style="font-size:0.82em; color:#666;">Formula: Investment needed = (monthly goal × 12) ÷ yield. Illustrative only — distributions are variable, not guaranteed, and may include return of capital. Yield alone is not total return.</p>
+  <p style="font-size:0.82em; color:#A1A1AA;">Formula: Investment needed = (monthly goal × 12) ÷ yield. Illustrative only — distributions are variable, not guaranteed, and may include return of capital. Yield alone is not total return.</p>
 
   <p>Notice what the table really shows: chasing a higher yield cuts the capital required, but as we covered above, higher yields usually mean options strategies, leverage, or decay risk. That tension — capital required vs. yield risk — is the core question every monthly income investor wrestles with.</p>
 
@@ -1240,7 +1362,7 @@ header, .nx-header {
   <br><br>
   Contact: <a href="mailto:advertise@mrvn.me">advertise@mrvn.me</a>
   <br><br>
-  <span style="color:#999;font-size:0.8em;">© 2026 MonthlyPayout.com · All Rights Reserved · For Entertainment Purposes Only</span>
+  <span style="color:#71717A;font-size:0.8em;">© 2026 MonthlyPayout.com · All Rights Reserved · For Entertainment Purposes Only</span>
 </footer>
 
 <!-- LIVE DATA SCRIPT -->
